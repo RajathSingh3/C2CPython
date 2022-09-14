@@ -4,7 +4,7 @@ if age < 20:
     print("Minimum Age is 20")
 else:
     phone = input("Enter Your Telephone Number : ")
-    if phone.isnumeric() == False and len(phone) != 10:
+    if not phone.isnumeric() or len(phone) != 10:
         print("Phone Number Should be 10 Digits and Can Only Contain Numbers")
     else:
         salary = int(input("Enter Your Salary : "))
@@ -20,7 +20,7 @@ def whileex():
         print("Age Cannot Be Lesser Than 20")
         age = input("Enter Your Age : ")
     phone = int(input("Enter Your Telephone Number : "))
-    while phone.isnumeric() == False and len(phone)!= 10:
+    while not phone.isnumeric() or len(phone) != 10:
         print("Phone Number Should be 10 Digits and Can Only Contain Numbers")
         phone = input("Enter Your Telephone Number : ")
     salary = int(input("Enter Your Salary : "))
