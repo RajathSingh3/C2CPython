@@ -38,7 +38,7 @@ while len(department) == 0:
 cur = conn.cursor()
 conn.autocommit = True
 try:
-    cur.execute("create table customer(fname varchar(255) NOT NULL,lname varchar(255) NOT NULL, phone int,age int,city varchar(255),salary float,department varchar(255));")
+    cur.execute("create table customer(fname varchar(255) NOT NULL,lname varchar(255) NOT NULL, phone bigint,age int,city varchar(255),salary float,department varchar(255));")
 except Exception as y:
     print(y)
 insertquery = "insert into customer (fname, lname, phone, age, city, salary, department)values(%s, %s, %s, %s, %s, %s, %s)"
